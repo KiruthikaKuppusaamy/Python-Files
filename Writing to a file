@@ -1,0 +1,54 @@
+# 1. Writing to a file in write mode
+f1 = open("sample.txt","w")   
+f1.write("ChatGPT was created by OpenAI, an AI and research company.")
+if f1:
+    print("File created successfully in write mode")
+    
+____________________________________________________________
+output
+File created successfully in write mode
+
+sample.txt (content)
+ChatGPT was created by OpenAI, an AI and research company.
+
+Note:
+When executed again previous content will be overwriten
+____________________________________________________________
+
+
+
+# 2. Writing to a file in append mode
+f1 = open("sample.txt","a")   
+f1.write("ChatGPT is scary good")
+if f1:
+    print("File created successfully in append mode")
+
+____________________________________________________________
+output
+File created successfully in append mode
+
+sample.txt (content)
+ChatGPT was created by OpenAI, an AI and research company. ChatGPT is scary good
+
+Note:
+When executed again content will be appended at the end each time
+____________________________________________________________
+
+
+
+# 3. Writing to a file in exclusive creation mode
+f1 = open("sample.txt","x")   
+f1.write("ChatGPT is scary good")
+if f1:
+    print("File created successfully in exclusive creation mode")
+
+____________________________________________________________
+output
+Traceback (most recent call last):
+  File "/home/main.py", line 2, in <module>
+    f1 = open("sample.txt","x")   
+FileExistsError: [Errno 17] File exists: 'sample.txt'
+
+Note:
+When executed first time it creates the file but when executed again raises error message
+____________________________________________________________
