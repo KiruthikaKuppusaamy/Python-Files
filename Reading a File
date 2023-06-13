@@ -1,0 +1,69 @@
+# 1. reading specific number of bytes from the file 
+with open("text.txt","r") as f1:
+    read_data = f1.read(7)
+    print(read_data)
+
+
+_______________________________________________________________________
+output
+ChatGPT
+_______________________________________________________________________
+
+
+# 2. reading all the content from the file 
+with open("text.txt","r") as f1:
+    read_data = f1.read()
+    print(read_data)
+
+
+_______________________________________________________________________
+output
+ChatGPT was created by OpenAI, an AI and research company. 
+The company launched ChatGPT on November 30, 2022.
+ChatGPT is a natural language processing tool driven by AI technology.
+_______________________________________________________________________
+
+
+
+# 3. reading the file using for loop
+with open("text.txt","r") as f1:
+    for i in f1:
+        print (i)
+_______________________________________________________________________
+output
+ChatGPT was created by OpenAI, an AI and research company. 
+
+The company launched ChatGPT on November 30, 2022.
+
+ChatGPT is a natural language processing tool driven by AI technology.
+_______________________________________________________________________
+
+
+
+
+# 4. reading lines using readline()
+with open("text.txt","r") as f1:
+    read_data = f1.readline()
+    read_data1 = f1.readline() # to read another line
+    print(read_data)
+    print(read_data1)
+_______________________________________________________________________
+output
+ChatGPT was created by OpenAI, an AI and research company. 
+
+The company launched ChatGPT on November 30, 2022.
+_______________________________________________________________________
+
+
+
+# 5. reading lines using readlines()
+with open("text.txt","r") as f1:
+    read_data = f1.readlines()
+    print(read_data)
+    
+_______________________________________________________________________
+output
+['ChatGPT was created by OpenAI, an AI and research company. \n', 
+'The company launched ChatGPT on November 30, 2022.\n', 
+'ChatGPT is a natural language processing tool driven by AI technology.']
+_______________________________________________________________________
