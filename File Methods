@@ -1,0 +1,39 @@
+# 1. tell() - return current position  
+f1 = open("sample.txt","r")    
+print("Current Position of file pointer while opening the file is :",f1.tell())    
+
+file_content = f1.read()    
+print("Current Position of file pointer after reading the content is :", f1.tell())    
+
+__________________________________________________________________________________________________
+output
+Current Position of file pointer while opening the file is : 0
+Current Position of file pointer after reading the content is : 77
+
+Note:
+File Content
+Our greatest glory is not in never falling, but in rising every time we fall.
+__________________________________________________________________________________________________
+
+
+
+# 2. seek() - changes current position
+f1 = open("sample.txt","r")    
+print("Current Position is :",f1.tell())    
+
+f1.seek(5)
+print("After changing the position is :", f1.tell())   
+
+file_content = f1.readline()    
+print("Content after changing position is :", file_content)
+__________________________________________________________________________________________________
+output
+Current Position is : 0
+After changing the position is : 5
+Content after changing position is : reatest glory is not in never falling
+
+Note:
+File Content
+Our greatest glory is not in never falling
+but in rising every time we fall.
+__________________________________________________________________________________________________
