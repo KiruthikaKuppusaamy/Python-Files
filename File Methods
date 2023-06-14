@@ -1,4 +1,15 @@
-# 1. tell() - return current position  
+# 1. writelines - write multiple lines
+with open("test.txt","w") as f1:
+    lines = ["Everything in your life is dictated by you ","Be who you want to be "]
+    f1.writelines(lines)
+__________________________________________________________________________________________________
+output
+Note: content of text.txt
+Everything in your life is dictated by you Be who you want to be 
+__________________________________________________________________________________________________
+
+
+# 2. tell() - return current position  
 f1 = open("sample.txt","r")    
 print("Current Position of file pointer while opening the file is :",f1.tell())    
 
@@ -17,7 +28,7 @@ ________________________________________________________________________________
 
 
 
-# 2. seek() - changes current position
+# 3. seek() - changes current position
 f1 = open("sample.txt","r")    
 print("Current Position is :",f1.tell())    
 
