@@ -1,4 +1,27 @@
-# 1. Writing to a file in write mode
+# 1. read mode in file 
+f1 = open("sample.txt",'r')
+
+if f1:
+    print("File opened successfully")
+    
+___________________________________________________________________
+output
+File opened successfully
+___________________________________________________________________
+
+
+# 2. using with...open in file 
+with open("sample.txt",'r') as f1:
+    file_content = f1.read()
+    print(file_content)
+__________________________________________________________________
+output
+Our greatest glory is not in never falling, but in rising every time we fall.
+___________________________________________________________________
+
+
+
+# 3. Writing to a file in write mode
 f1 = open("sample.txt","w")   
 f1.write("ChatGPT was created by OpenAI, an AI and research company.")
 if f1:
@@ -17,7 +40,7 @@ ____________________________________________________________
 
 
 
-# 2. Writing to a file in append mode
+# 4. Writing to a file in append mode
 f1 = open("sample.txt","a")   
 f1.write("ChatGPT is scary good")
 if f1:
@@ -36,7 +59,7 @@ ____________________________________________________________
 
 
 
-# 3. Writing to a file in exclusive creation mode
+# 5. Writing to a file in exclusive creation mode
 f1 = open("sample.txt","x")   
 f1.write("ChatGPT is scary good")
 if f1:
